@@ -14,6 +14,7 @@ export default function Home() {
 
             <Navbar />
             <main className={styles.main}>
+            <h1>Home Page</h1>
                 <h1 className={styles.title}>
                     Go to <Link href="/about">About</Link>
                 </h1>
