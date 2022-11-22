@@ -1,28 +1,18 @@
-import Head from "next/head";
 import Link from "next/link";
-import { Navbar } from "../components/Navbar";
+import { MainLayout } from "../components/layouts/MainLayout";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
-            <Head>
-                <title>Home - Albert</title>
-                <meta name="description" content="Homepage of my super website" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <Navbar />
-            <main className={styles.main}>
+        <MainLayout>
             <h1>Home Page</h1>
-                <h1 className={styles.title}>
-                    Go to <Link href="/about">About</Link>
-                </h1>
+            <h1 className={styles.title}>
+                Go to <Link href="/about">About</Link>
+            </h1>
 
-                <p className={styles.description}>
-                    Get started by editing <code className={styles.code}>pages/index.tsx</code>
-                </p>
-            </main>
-        </div>
+            <p className={styles.description}>
+                Get started by editing <code className={styles.code}>pages/index.tsx</code>
+            </p>
+        </MainLayout>
     );
 }
