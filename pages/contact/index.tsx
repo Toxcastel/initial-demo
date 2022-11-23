@@ -9,7 +9,7 @@ export default function ContactPage() {
                 Go to <Link href="/">Home</Link>
             </h1>
 
-            <p className="description">
+            <p className={"description"}>
                 Get started by editing <code className="code">pages/contact.tsx</code>
             </p>
         </MainLayout>

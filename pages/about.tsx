@@ -1,9 +1,12 @@
 import Link from "next/link";
+import type { ReactElement } from "react";
+import { DarkLayout } from "../components/layouts/DarkLayout";
 import { MainLayout } from "../components/layouts/MainLayout";
+import { NextPageWithLayout } from "./_app";
 
-export default function About() {
+const AboutPage: NextPageWithLayout = () => {
     return (
-        <MainLayout>
+        <>
             <h1>About Page</h1>
             <h1 className="title">
                 Go to <Link href="/">Home</Link>
@@ -12,6 +15,17 @@ export default function About() {
             <p className="description">
                 Get started by editing <code className="code">pages/about.tsx</code>
             </p>
+        </>
+    );
+};
+
+// añadiendo una propiedad al prototype del aboutPage:
+AboutPage.getLayout = function getLayout(page: ReactElement) {
+    return (
+        <MainLayout>
+            <DarkLayout>{page}</DarkLayout>
         </MainLayout>
     );
-}
+};
+
+export default AboutPage;
