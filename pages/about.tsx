@@ -19,7 +19,7 @@ const AboutPage: NextPageWithLayout = () => {
     );
 };
 
-// añadiendo una propiedad al prototype del aboutPage:
+// añadiendo una propiedad al prototype del aboutPage. Esto hace ver más fácil los componentes anidados.
 AboutPage.getLayout = function getLayout(page: ReactElement) {
     return (
         <MainLayout>
